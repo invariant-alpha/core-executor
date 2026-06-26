@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY pyproject.toml ./
 COPY src/ ./src/
-RUN pip install -e .[test]
+RUN pip install redis && pip install -e .[test]
 
 COPY . .
 
